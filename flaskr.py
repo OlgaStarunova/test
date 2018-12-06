@@ -1,3 +1,4 @@
+# Привет!!!
 import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash
@@ -17,6 +18,7 @@ def connect_db():
 
 @app.before_request
 def before_request():
+    x = 1
     g.db = connect_db()
 
 @app.teardown_request
